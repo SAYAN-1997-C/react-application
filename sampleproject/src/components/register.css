@@ -1,0 +1,14 @@
+.clsadd
+{
+    display: flex !important;
+    flex-direction: column;
+}
+
+.clsform
+{
+    display: flex !important;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    margin: 0px auto;
+}

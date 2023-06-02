@@ -1,0 +1,13 @@
+.control-panel {
+  
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(196, 196, 196);
+}

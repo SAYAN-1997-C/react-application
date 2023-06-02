@@ -1,0 +1,36 @@
+import { Route, Routes } from "react-router-dom";
+import NonUserHeader from "../../components/Header/NonUserHeader";
+import Login from "../Auth/Login";
+import About from "../Auth/About";
+import Registration from "../Auth/Registration";
+import Dashboard from "./Dashboard/Dashboard";
+import Home from "../Home/Home";
+import Footer from "../../components/Footer/Footer";
+import UserPages from "./UserPages";
+import Playlist from "./Playlist";
+import PrivateRoute from '../../privateroute';
+
+
+const NonUserPages = () => {
+  const token = sessionStorage.getItem('mytoken');
+  
+  return (
+    <div>
+      <div className="bg-slate-900 min-h-screen md:h-full">
+        <NonUserHeader />
+        <Home />
+        <Routes>
+          <Route path="/" element={sessionStorage.getItem("mytoken") !== null  ? <PrivateRoute><Dashboard/></PrivateRoute>:<Dashboard/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/playlist" element={<Playlist />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/userpages" element={<UserPages />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </div>
+  );
+};
+
+export default NonUserPages;

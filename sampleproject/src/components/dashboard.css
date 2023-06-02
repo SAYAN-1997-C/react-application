@@ -1,0 +1,7 @@
+.clsnews
+{
+    display: flex !important;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    /* width: 500px; */
+}
